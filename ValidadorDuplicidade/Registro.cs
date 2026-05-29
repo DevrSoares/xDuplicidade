@@ -5,7 +5,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ValidadorDuplicidade
 {
-    internal class Registro
+    public class Registro
     {
        public string NumeroRegistro;
 
@@ -22,6 +22,10 @@ namespace ValidadorDuplicidade
             return $"{NomeRegistro} - {ValorRegistro} - {DataRegistro}";
         }
 
+        public string[] RetornArray()
+        {
+            return new string[] { NumeroRegistro, NomeRegistro, ValorRegistro, DataRegistro };
+        }
 
     }
 }

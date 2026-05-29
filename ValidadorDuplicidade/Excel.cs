@@ -6,13 +6,21 @@ namespace ValidadorDuplicidade
     {
         bool Data;
         bool Nome = true;
+        bool Valor = false;
 
 
         public (List<Registro> Lista1,List<Registro> Lista2,List<Registro> Lista3,Dictionary<string, List<Registro>> Duplicados,Dictionary<string, string> nomes)abrirDocumento(string caminho, Filtros filtro)
         {
+            if(filtro.Valor)
+            {
+                Valor = true;
+            }
+            else
+            {
+                Valor = false;
+            }
 
-
-
+         
 
             try
             {
@@ -63,6 +71,12 @@ namespace ValidadorDuplicidade
                         worksheet2.Dimension == null ||
                         worksheet3.Dimension == null)
                     {
+                        MessageBox.Show(
+                            "Uma ou mais planilhas não existem.",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
                         return (
                             new List<Registro>(),
                             new List<Registro>(),
@@ -127,14 +141,29 @@ namespace ValidadorDuplicidade
 
 
 
+                    //aqui vou pegar os filtro novamente (nome, valor, e data) caso o filtro ativo, ele so tras o registro q tem os mesmo pareametos)
+                    var registrosDuplicados1 = Lista1.Where(
+                        x => Lista3.Any(z =>
+                            x.NomeRegistro == z.NomeRegistro && (!Valor || x.ValorRegistro == z.ValorRegistro)
+                        )
+                    ).ToList();
+
+                    var registrosDuplicados2 = Lista2.Where(
+                        x => Lista3.Any(z => x.NomeRegistro == z.NomeRegistro && (!Valor || x.ValorRegistro == z.ValorRegistro))
+                        ).ToList();
+
+                    var registrosDuplicados3 = Lista3.Where(
+                        x => Lista3.Count(z => x.NomeRegistro == z.NomeRegistro) > 1
+
+                    ).ToList();
+
                     duplicadosTodos = Lista3
                     .Where(x =>
                         Lista2.Any(y => x.NomeRegistro == y.NomeRegistro)
                         ||
-                        Lista1.Any(z => x.NomeRegistro == z.NomeRegistro)
-                    )
-                    .GroupBy(x => x.NomeRegistro)
-                    .Select(g => g.First())
+                        (Lista1.Any(z => x.NomeRegistro == z.NomeRegistro) || Lista3.Count(z => x.NomeRegistro == z.NomeRegistro) > 1)
+
+                 ) 
                     .ToList();
 
 
@@ -148,16 +177,25 @@ namespace ValidadorDuplicidade
 
                     Dictionary<string, List<Registro>> duplicados = new()
                     {
-                        { "DentroDa2", duplicadosDentroda2 },
+                        {"RegistrosLista1", registrosDuplicados1 },
+                        {"RegistrosLista2", registrosDuplicados2 },
+                        {"RegistrosLista3", registrosDuplicados3 },
                         { "DuplicadosTodos", duplicadosTodos }
                     };
 
+                    //Lista 1 - 3 le todas tabelas sem filtros, Duplicados 1 2 retorna os registros da lista 1 e 2 que tem os mesmo registros da lista 3
+                    //sendo assim os duplicados, e o DuplicadosTodos retorna os registros da lista 3 que tem os mesmo registros da lista 1 ou 2, sendo assim os duplicados
                     return (Lista1, Lista2, Lista3, duplicados, nomes);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao abrir o documento: " + ex.Message);
+               MessageBox.Show(
+                    $"Erro ao abrir o arquivo: {ex.Message}",
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
 
 
                 return (

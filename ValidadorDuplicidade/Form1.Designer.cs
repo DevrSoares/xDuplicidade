@@ -139,19 +139,20 @@
             // 
             // materialButton1
             // 
+            materialButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             materialButton1.Depth = 0;
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = null;
-            materialButton1.Location = new Point(691, 52);
+            materialButton1.Location = new Point(987, 53);
             materialButton1.Margin = new Padding(4);
             materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton1.Name = "materialButton1";
             materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(81, 36);
+            materialButton1.Size = new Size(110, 36);
             materialButton1.TabIndex = 35;
-            materialButton1.Text = "Aplicar";
+            materialButton1.Text = "Duplicados";
             materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton1.UseAccentColor = false;
             materialButton1.UseVisualStyleBackColor = true;
@@ -181,6 +182,7 @@
             // 
             // caminhoSelecionado
             // 
+            caminhoSelecionado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             caminhoSelecionado.BackColor = Color.FromArgb(44, 55, 66);
             caminhoSelecionado.BaseColor = Color.FromArgb(44, 55, 66);
             caminhoSelecionado.BorderColorA = Color.FromArgb(64, 158, 255);
@@ -309,6 +311,7 @@
             // 
             // QtdPl1
             // 
+            QtdPl1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QtdPl1.BackColor = Color.FromArgb(192, 192, 255);
             QtdPl1.BaseColor = Color.Transparent;
             QtdPl1.BorderColorA = Color.Transparent;
@@ -370,14 +373,15 @@
             Planilha1.ForeColor = SystemColors.Window;
             Planilha1.FormattingEnabled = true;
             Planilha1.HorizontalScrollbar = true;
-            Planilha1.Location = new Point(4, 35);
+            Planilha1.Location = new Point(4, 37);
             Planilha1.Margin = new Padding(3, 2, 3, 2);
             Planilha1.Name = "Planilha1";
-            Planilha1.Size = new Size(350, 289);
+            Planilha1.Size = new Size(350, 274);
             Planilha1.TabIndex = 40;
             // 
             // Nome1
             // 
+            Nome1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Nome1.BackColor = Color.FromArgb(49, 61, 63);
             Nome1.BaseColor = Color.Transparent;
             Nome1.BorderColorA = Color.Transparent;
@@ -437,6 +441,7 @@
             // 
             // QtdPl2
             // 
+            QtdPl2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QtdPl2.BackColor = Color.FromArgb(192, 192, 255);
             QtdPl2.BaseColor = Color.Transparent;
             QtdPl2.BorderColorA = Color.Transparent;
@@ -499,10 +504,10 @@
             Planilha2.ForeColor = SystemColors.Window;
             Planilha2.FormattingEnabled = true;
             Planilha2.HorizontalScrollbar = true;
-            Planilha2.Location = new Point(4, 34);
+            Planilha2.Location = new Point(4, 37);
             Planilha2.Margin = new Padding(3, 2, 3, 2);
             Planilha2.Name = "Planilha2";
-            Planilha2.Size = new Size(349, 289);
+            Planilha2.Size = new Size(350, 274);
             Planilha2.TabIndex = 39;
             // 
             // ZoomP2
@@ -526,6 +531,7 @@
             // 
             // Nome2
             // 
+            Nome2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Nome2.BackColor = Color.FromArgb(49, 61, 63);
             Nome2.BaseColor = Color.Transparent;
             Nome2.BorderColorA = Color.Transparent;
@@ -567,6 +573,7 @@
             // 
             // QtdPl3
             // 
+            QtdPl3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QtdPl3.BackColor = Color.FromArgb(192, 192, 255);
             QtdPl3.BaseColor = Color.Transparent;
             QtdPl3.BorderColorA = Color.Transparent;
@@ -575,12 +582,12 @@
             QtdPl3.BorderColorD = Color.Transparent;
             QtdPl3.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Bold, GraphicsUnit.Point, 0);
             QtdPl3.ForeColor = Color.Navy;
-            QtdPl3.Location = new Point(241, 22);
+            QtdPl3.Location = new Point(240, 22);
             QtdPl3.Margin = new Padding(3, 2, 3, 2);
             QtdPl3.MaxLength = 32767;
             QtdPl3.MultiLine = false;
             QtdPl3.Name = "QtdPl3";
-            QtdPl3.Size = new Size(108, 23);
+            QtdPl3.Size = new Size(106, 23);
             QtdPl3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             QtdPl3.TabIndex = 32;
             QtdPl3.Text = "skyTextBox1";
@@ -615,7 +622,7 @@
             panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
             panel8.Padding = new Padding(4);
-            panel8.Size = new Size(362, 373);
+            panel8.Size = new Size(355, 373);
             panel8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             panel8.TabIndex = 27;
             panel8.Text = "panel8";
@@ -647,15 +654,15 @@
             Planilha3.ForeColor = SystemColors.Window;
             Planilha3.FormattingEnabled = true;
             Planilha3.HorizontalScrollbar = true;
-            Planilha3.Location = new Point(4, 34);
+            Planilha3.Location = new Point(4, 37);
             Planilha3.Margin = new Padding(3, 2, 3, 2);
             Planilha3.Name = "Planilha3";
-            Planilha3.Size = new Size(354, 289);
+            Planilha3.Size = new Size(347, 274);
             Planilha3.TabIndex = 25;
             // 
             // Nome3
             // 
-            Nome3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Nome3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Nome3.BackColor = Color.FromArgb(49, 61, 63);
             Nome3.BaseColor = Color.Transparent;
             Nome3.BorderColorA = Color.Transparent;
@@ -725,6 +732,7 @@
             // 
             // FotoErro2
             // 
+            FotoErro2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             FotoErro2.BackColor = Color.Transparent;
             FotoErro2.BackgroundImage = Properties.Resources.critico;
             FotoErro2.BackgroundImageLayout = ImageLayout.Zoom;
@@ -755,8 +763,9 @@
             Margin = new Padding(2);
             Name = "Form1";
             SizeGripStyle = SizeGripStyle.Show;
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = ".";
+            WindowState = FormWindowState.Maximized;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel6.ResumeLayout(false);

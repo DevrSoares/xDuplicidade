@@ -32,3 +32,5 @@ C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\bin\Debug\ne
 C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\bin\Debug\net10.0-windows\Ookii.Dialogs.WinForms.dll
 C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\bin\Debug\net10.0-windows\ValidadorDuplicidade.dll.config
 C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\obj\Debug\net10.0-windows\ValidadorDuplicidade.Properties.Resources.resources
+C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\obj\Debug\net10.0-windows\ValidadorDuplicidade.sourcelink.json
+C:\Users\ti2\source\repos\ValidadorDuplicidade\ValidadorDuplicidade\obj\Debug\net10.0-windows\ValidadorDuplicidade.Duplicados.resources

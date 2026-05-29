@@ -7,13 +7,13 @@ namespace ValidadorDuplicidade
     internal class Filtros
     {
 
-        public bool Codigo = true;
+        public bool Codigo = false;
 
-        public bool Data = true;
+        public bool Data = false;
 
-        public bool Nome = true;
+        public bool Nome = false;
 
-        public bool Valor = true;
+        public bool Valor = false;
 
 
 
